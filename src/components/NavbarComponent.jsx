@@ -12,18 +12,16 @@ const NavbarComponent = () => {
     const element = document.getElementById(id);
     const collapseEl = collapseRef.current;
   
-    // Step 1: Collapse mobile navbar if it's open
     const isMobile = window.innerWidth < 768;
     const wasExpanded = collapseEl?.classList.contains("show");
   
     if (wasExpanded) {
       collapseEl.classList.remove("show");
     }
-  
-    // Step 2: Scroll after collapse animation completes (~350ms is default Bootstrap transition)
+
     setTimeout(() => {
       if (element) {
-        const yOffset = isMobile ? -50 : -90; // Customize these values
+        const yOffset = isMobile ? -50 : -90;
         const y =
           element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });

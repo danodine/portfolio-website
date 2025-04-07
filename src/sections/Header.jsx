@@ -5,7 +5,6 @@ import "../css/global.css";
 
 const Header = () => {
   const sectionRef = useRef(null);
-  // Trigger animation when 50% of the section is in view (adjust amount as needed)
   const isInView = useInView(sectionRef, { amount: 0.5, once: false });
   const titleControls = useAnimation();
   const subtitleControls = useAnimation();
@@ -24,7 +23,7 @@ const Header = () => {
     },
   };
   const subtitleVariants = {
-    hiddenRight: { x: "100%", opacity: 0 }, // off-screen to the right
+    hiddenRight: { x: "100%", opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,

@@ -43,7 +43,6 @@ html.dark {
   .navbar-brand {
     color: white !important;
   }
-  /* SKILLS */
   .card {
     background-color: #121212 !important;
     color: white;
@@ -58,6 +57,9 @@ html.dark {
   }
   .section-subheadtext a {
     color: white;
+  }
+  .slick-dots li button:before {
+    color: white !important;
   }
 }
 

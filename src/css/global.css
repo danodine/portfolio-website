@@ -238,6 +238,9 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
 
 @media (max-width: 768px) {
   .ipad-screen {
@@ -252,6 +255,9 @@
   .slide-text-p-year {
     margin-bottom: 0.5rem !important;
     font-size: 0.75rem;
+  }
+  .slide-text {
+    margin-top: 0;
   }
 }
 /* SKILLS */
