@@ -15,8 +15,8 @@ const Contact = () => {
             width="50"
             src={
               darkMode
-                ? "/public/assets/icons/linkedin-50-da.png"
-                : "/public/assets/icons/linkedin-50-li.png"
+                ? "/assets/icons/linkedin-50-da.png"
+                : "/assets/icons/linkedin-50-li.png"
             }
             alt={`Linkedin`}
           />
@@ -27,8 +27,8 @@ const Contact = () => {
             width="50"
             src={
               darkMode
-                ? "/public/assets/icons/stepstone-da.png"
-                : "/public/assets/icons/stepstone-li.png"
+                ? "/assets/icons/stepstone-da.png"
+                : "/assets/icons/stepstone-li.png"
             }
             alt={`Stepstone`}
           />
@@ -39,8 +39,8 @@ const Contact = () => {
             width="50"
             src={
               darkMode
-                ? "/public/assets/icons/xing-da.png"
-                : "/public/assets/icons/xing-li.png"
+                ? "/assets/icons/xing-da.png"
+                : "/assets/icons/xing-li.png"
             }
             alt={`Xing`}
           />
