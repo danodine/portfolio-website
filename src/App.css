@@ -9,13 +9,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  background-color: #ffffff;
-  color: #111827;
-  overflow-x: hidden;
-  font-family: "Lato", sans-serif;
-}
 h1,
 h2,
 h3,
@@ -74,14 +67,5 @@ html.dark {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (min-width: 768px) {
-  #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin: 1rem;
-    text-align: center;
   }
 }

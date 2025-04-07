@@ -11,8 +11,8 @@ const Contact = () => {
       <div className="contact-icons">
         <a href="https://www.linkedin.com/in/davidnodine/" target="blank">
           <img
-            height="50"
-            width="50"
+            height="30"
+            width="30"
             src={
               darkMode
                 ? "/assets/icons/linkedin-50-da.png"
@@ -23,8 +23,8 @@ const Contact = () => {
         </a>
         <a href="">
           <img
-            height="50"
-            width="50"
+            height="30"
+            width="30"
             src={
               darkMode
                 ? "/assets/icons/stepstone-da.png"
@@ -35,8 +35,8 @@ const Contact = () => {
         </a>
         <a href="">
           <img
-            height="50"
-            width="50"
+            height="30"
+            width="30"
             src={
               darkMode
                 ? "/assets/icons/xing-da.png"
