@@ -1,0 +1,14 @@
+/* Basic CSS Reset & global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #111827;
+    overflow-x: hidden;
+  }

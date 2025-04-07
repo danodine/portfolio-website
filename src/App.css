@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+html.dark {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+
+  .navbar {
+    background-color: #121212 !important;
+    color: white;
+  }
+  .navbar-link,
+  .theme-toggle-button,
+  .navbar-brand {
+    color: white !important;
+  }
+  /* SKILLS */
+  .card {
+    background-color: #121212 !important;
+    color: white;
+  }
+  .timeline-item .card {
+    background: #121212;
+    color: white;
+    border: 1px solid white;
+  }
+  .ipad-screen {
+    background: #121212;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
