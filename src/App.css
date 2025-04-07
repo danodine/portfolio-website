@@ -61,6 +61,13 @@ html.dark {
   .slick-dots li button:before {
     color: white !important;
   }
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: white !important;
+  }
+  .nav-link {
+    color: white;
+  }
 }
 
 @keyframes logo-spin {

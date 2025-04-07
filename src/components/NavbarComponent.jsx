@@ -1,38 +1,37 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 import ThemeToggle from "./ThemeToggle";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "../css/global.css";
 
 const NavbarComponent = () => {
+  const [expanded, setExpanded] = useState(false);
   const { darkMode } = useTheme();
-
+  const { language, setLanguage } = useLanguage();
   const collapseRef = useRef();
 
   const scrollTo = (id) => {
     const element = document.getElementById(id);
-    const collapseEl = collapseRef.current;
-
     const isMobile = window.innerWidth < 768;
-    const wasExpanded = collapseEl?.classList.contains("show");
+  
+    closeNavbar();
+  
+    setTimeout(() => {
+      if (element) {
+        const yOffset = isMobile ? -50 : -90;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 350);
+  };
 
-    if (wasExpanded) {
-      collapseEl.classList.remove("show");
-    }
-
-    setTimeout(
-      () => {
-        if (element) {
-          const yOffset = isMobile ? -50 : -90;
-          const y =
-            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      },
-      wasExpanded ? 350 : 0
-    );
+  const closeNavbar = () => {
+    setExpanded(false);
   };
 
   const elements = ["about", "career", "education", "skills", "contact"];
@@ -40,6 +39,8 @@ const NavbarComponent = () => {
   return (
     <Navbar
       expand="lg"
+      expanded={expanded}
+      onToggle={() => setExpanded((prev) => !prev)}
       className={`bg-body-tertiary sticky-top ${darkMode ? "navbar-dark" : ""}`}
     >
       <Container>
@@ -68,8 +69,37 @@ const NavbarComponent = () => {
               </Nav.Link>
             ))}
           </Nav>
-          <Nav className="ms-auto">
-            <Nav.Link className="themeButton">
+          <Nav className="ms-auto d-flex align-items-center">
+            <NavDropdown title="Language" id="language-dropdown">
+              <NavDropdown.Item
+                active={language === "en"}
+                onClick={() => {
+                  setLanguage("en");
+                  closeNavbar();
+                }}
+              >
+                English
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                active={language === "es"}
+                onClick={() => {
+                  setLanguage("es");
+                  closeNavbar();
+                }}
+              >
+                Español
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                active={language === "de"}
+                onClick={() => {
+                  setLanguage("de");
+                  closeNavbar();
+                }}
+              >
+                Deutsch
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link className="themeButton" onClick={closeNavbar}>
               <ThemeToggle />
             </Nav.Link>
           </Nav>

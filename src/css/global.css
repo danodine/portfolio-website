@@ -11,6 +11,10 @@
     opacity: 0.8;
   }
 }
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #121212 !important;
+}
 /* HEADER */
 .header-container {
   position: relative;

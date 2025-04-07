@@ -1,53 +1,10 @@
-import {
-  SiReact,
-  SiNodedotjs,
-  SiJavascript,
-  SiGit,
-  SiMongodb,
-  SiRedux,
-} from "@icons-pack/react-simple-icons";
+import { useLanguage } from "../context/LanguageContext";
+import { getContent } from "../data/getContent";
 import "../css/global.css";
 
 const Skills = () => {
-  const skills = [
-    {
-      skill: "React",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiReact className="skill-icons" />,
-    },
-    {
-      skill: "JavaScript",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiJavascript className="skill-icons" />,
-    },
-    {
-      skill: "Node.js",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiNodedotjs className="skill-icons" />,
-    },
-    {
-      skill: "MongoDB",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiMongodb className="skill-icons" />,
-    },
-    {
-      skill: "Git",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiGit className="skill-icons" />,
-    },
-    {
-      skill: "Redux",
-      percentage: 0.95,
-      description: "description",
-      icon: <SiRedux className="skill-icons" />,
-    },
-  ];
-
+    const { language } = useLanguage();
+    const { skills } = getContent(language);
   return (
     <div className="py-16 max-w-3xl mx-auto text-center">
       <div className="skills-container">

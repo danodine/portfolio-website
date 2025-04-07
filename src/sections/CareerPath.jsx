@@ -2,57 +2,13 @@ import React, { useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform } from "framer-motion";
 import TimelineItem from "../components/TimelineItem";
+import { useLanguage } from "../context/LanguageContext";
+import { getContent } from "../data/getContent";
 import "../css/global.css";
 
-const steps = [
-  {
-    company: "Galileo Financial Technologies",
-    position: "Frontend Semi Senior developer",
-    tagline:
-      "Leading provider of advanced payment and financial technology solutions.",
-    tasks: [
-      "Developed web applications and mobile apps for Android and iOS",
-      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
-      "Teamwork using git development environments",
-      "Synchronize with back-end developers",
-      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
-      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
-    ],
-    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
-  },
-  {
-    company: "Galileo Financial Technologies",
-    position: "Frontend Semi Senior developer",
-    tagline:
-      "Leading provider of advanced payment and financial technology solutions.",
-    tasks: [
-      "Developed web applications and mobile apps for Android and iOS",
-      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
-      "Teamwork using git development environments",
-      "Synchronize with back-end developers",
-      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
-      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
-    ],
-    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
-  },
-  {
-    company: "Galileo Financial Technologies",
-    position: "Frontend Semi Senior developer",
-    tagline:
-      "Leading provider of advanced payment and financial technology solutions.",
-    tasks: [
-      "Developed web applications and mobile apps for Android and iOS",
-      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
-      "Teamwork using git development environments",
-      "Synchronize with back-end developers",
-      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
-      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
-    ],
-    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
-  },
-];
-
 const CareerPath = () => {
+  const { language } = useLanguage();
+  const { steps } = getContent(language);
   const timelineRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: timelineRef,
