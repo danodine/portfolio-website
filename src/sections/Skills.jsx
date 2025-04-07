@@ -1,4 +1,11 @@
-import { SiReact, SiNodedotjs, SiJavascript, SiGit, SiMongodb, SiRedux } from '@icons-pack/react-simple-icons';
+import {
+  SiReact,
+  SiNodedotjs,
+  SiJavascript,
+  SiGit,
+  SiMongodb,
+  SiRedux,
+} from "@icons-pack/react-simple-icons";
 import "../css/global.css";
 
 const Skills = () => {
@@ -7,37 +14,37 @@ const Skills = () => {
       skill: "React",
       percentage: 0.95,
       description: "description",
-      icon: <SiReact className='skill-icons'/>,
+      icon: <SiReact className="skill-icons" />,
     },
     {
       skill: "JavaScript",
       percentage: 0.95,
       description: "description",
-      icon: <SiJavascript className='skill-icons'/>,
+      icon: <SiJavascript className="skill-icons" />,
     },
     {
       skill: "Node.js",
       percentage: 0.95,
       description: "description",
-      icon: <SiNodedotjs className='skill-icons'/>,
+      icon: <SiNodedotjs className="skill-icons" />,
     },
     {
       skill: "MongoDB",
       percentage: 0.95,
       description: "description",
-      icon: <SiMongodb className='skill-icons'/>,
+      icon: <SiMongodb className="skill-icons" />,
     },
     {
       skill: "Git",
       percentage: 0.95,
       description: "description",
-      icon: <SiGit className='skill-icons'/>,
+      icon: <SiGit className="skill-icons" />,
     },
     {
       skill: "Redux",
       percentage: 0.95,
       description: "description",
-      icon: <SiRedux className='skill-icons'/>,
+      icon: <SiRedux className="skill-icons" />,
     },
   ];
 
@@ -46,11 +53,15 @@ const Skills = () => {
       <div className="skills-container">
         <div className="responsive-container-block big-container">
           <div className="responsive-container-block container">
-            <p className="p-h3 skills-title">
-              Top Skills
-            </p>
+            <p className="p-h3 skills-title">Top Skills</p>
             <p className="section-subheadtext">
-            These are some of my top skills that I bring to every project. from building responsive interfaces to solving complex technical challenges. For a full list of my experience and skills, feel free to check out my <a href="https://www.linkedin.com/in/davidnodine/" target="blank">LinkedIn</a>
+              These are some of my top skills that I bring to every project.
+              from building responsive interfaces to solving complex technical
+              challenges. For a full list of my experience and skills, feel free
+              to check out my{" "}
+              <a href="https://www.linkedin.com/in/davidnodine/" target="blank">
+                LinkedIn
+              </a>
             </p>
             <div className="responsive-container-block">
               {skills.map((skill) => (

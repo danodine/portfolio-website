@@ -33,9 +33,7 @@ const cards = [
 const AboutCards = () => {
   return (
     <div className="about-container">
-      <p className="about-me p-h3">
-        About Me
-      </p>
+      <p className="about-me p-h3">About Me</p>
       <div className="about-section">
         {cards.map((card, index) => (
           <motion.div

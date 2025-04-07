@@ -11,25 +11,26 @@ const slides = [
     image: "/public/assets/images/070d0eef",
     title: "University Engineering Degree",
     institution: "Universidad Técnica Particular de Loja",
-    degree: 'Computer Systems Engineer and Computer Science',
+    degree: "Computer Systems Engineer and Computer Science",
     year: "Loja - Ecuador 09.2013 – 12.2019",
-    descriptionWb: "Tesis: 'Evaluation of QoS Parameters of VoIP in MANET Networks'"
+    descriptionWb:
+      "Tesis: 'Evaluation of QoS Parameters of VoIP in MANET Networks'",
   },
   {
     image: "/public/assets/images/070d0eef",
     title: "This is slide 2",
     institution: "ggwp",
-    degree: 'Bachelor of Science in Computer Science',
+    degree: "Bachelor of Science in Computer Science",
     descriptionMb: "this is a description",
-    descriptionWb: "this is a description"
+    descriptionWb: "this is a description",
   },
   {
     image: "/public/assets/images/070d0eef",
     title: "This is slide 3",
     institution: "ggwp",
-    degree: 'Bachelor of Science in Computer Science',
+    degree: "Bachelor of Science in Computer Science",
     descriptionMb: "this is a description",
-    descriptionWb: "this is a description"
+    descriptionWb: "this is a description",
   },
 ];
 
@@ -48,7 +49,7 @@ const Education = () => {
       : ["start 100%", "start 25%"],
   });
 
-  const imageEnding = isMobile ? '-mobile.jpg' : "-web.jpg"
+  const imageEnding = isMobile ? "-mobile.jpg" : "-web.jpg";
 
   const rotateX = useTransform(scrollYProgress, [0, 1], [75, 0]);
 
@@ -75,15 +76,26 @@ const Education = () => {
             {slides.map((slide, idx) => (
               <div key={idx} className="slide-content">
                 <div className="slide-image">
-                  <img src={`${slide.image}${imageEnding}`} alt={`Slide ${idx}`} />
+                  <img
+                    src={`${slide.image}${imageEnding}`}
+                    alt={`Slide ${idx}`}
+                  />
                 </div>
                 <div className="slide-text">
                   <p className="slide-text-p-title">{slide.title}</p>
-                 {!isMobile ? <p className="slide-text-p-text-title">Institution:</p> : null}
-                  <p className="slide-text-p-institution">{slide.institution}</p>
-                 {!isMobile ? <p className="slide-text-p-text-title">Degree:</p> : null}
+                  {!isMobile ? (
+                    <p className="slide-text-p-text-title">Institution:</p>
+                  ) : null}
+                  <p className="slide-text-p-institution">
+                    {slide.institution}
+                  </p>
+                  {!isMobile ? (
+                    <p className="slide-text-p-text-title">Degree:</p>
+                  ) : null}
                   <p className="slide-text-p-degree">{slide.degree}</p>
-                  {!isMobile ? <p className="slide-text-p-text-title">Where and when:</p> : null}
+                  {!isMobile ? (
+                    <p className="slide-text-p-text-title">Where and when:</p>
+                  ) : null}
                   <p className="slide-text-p-year">{slide.year}</p>
                 </div>
               </div>

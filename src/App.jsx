@@ -14,13 +14,27 @@ function App() {
     <div className="app-container">
       <Navbar />
       <main className="main-content">
-        <section id="header"><Header /></section>
-        <section id="about"><About /></section>
-        <section id="career"><CareerPath /></section>
-        <section id="education"><Education /></section>
-        <section id="skills"><Skills /></section>
-        <section id="contact"><Contact /></section>
-        <section id="footer"><Footer /></section>
+        <section id="header">
+          <Header />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="career">
+          <CareerPath />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <section id="footer">
+          <Footer />
+        </section>
       </main>
     </div>
   );

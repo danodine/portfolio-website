@@ -21,9 +21,9 @@ const TimelineItem = ({ company, tasks, position, tagline, yearPlace }) => {
         <p className="p-h4 timeline-title">{company}</p>
         <p className="timeline-position">{position}</p>
         <p className="timeline-tagline">{tagline}</p>
-          {tasks?.map((task) => (
-            <p className="timilene-task">{task}</p>
-          ))} 
+        {tasks?.map((task) => (
+          <p className="timilene-task">{task}</p>
+        ))}
         <p className="timeline-yearPlace">{yearPlace}</p>
       </div>
     </motion.div>

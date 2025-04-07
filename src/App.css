@@ -14,10 +14,14 @@ body {
   background-color: #ffffff;
   color: #111827;
   overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-h1, h2, h3, .p-h3, .p-h4 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+.p-h3,
+.p-h4 {
+  font-family: "Playfair Display", serif;
 }
 h1 {
   font-size: 3rem;
@@ -59,7 +63,7 @@ html.dark {
   .ipad-screen {
     background: #121212;
   }
-  .section-subheadtext a{
+  .section-subheadtext a {
     color: white;
   }
 }
@@ -81,4 +85,3 @@ html.dark {
     text-align: center;
   }
 }
-
