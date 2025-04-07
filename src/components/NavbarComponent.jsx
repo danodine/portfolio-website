@@ -7,7 +7,6 @@ import Navbar from "react-bootstrap/Navbar";
 import "../css/global.css";
 
 const NavbarComponent = () => {
-
   const { darkMode } = useTheme();
 
   const collapseRef = useRef();
@@ -39,10 +38,22 @@ const NavbarComponent = () => {
   const elements = ["about", "career", "education", "skills", "contact"];
 
   return (
-    <Navbar expand="lg" className={`bg-body-tertiary sticky-top ${darkMode ? "navbar-dark" : ""}`}>
+    <Navbar
+      expand="lg"
+      className={`bg-body-tertiary sticky-top ${darkMode ? "navbar-dark" : ""}`}
+    >
       <Container>
         <Navbar.Brand onClick={() => scrollTo("header")}>
-          David Nodine
+          <img
+            height="auto"
+            width="30"
+            src={
+              darkMode
+                ? "/assets/icons/logo-da.png"
+                : "/assets/icons/logo-li.png"
+            }
+            alt="logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" ref={collapseRef}>
