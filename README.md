@@ -1,12 +1,48 @@
-# React + Vite
+ortfolio Website
+This repository contains the source code for my personal portfolio website, built using React and Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+The portfolio website showcases my work as a digital illustrator, animator, and 3D modeler. It provides an interactive platform to display my projects and share information about my skills and experience.
 
-Currently, two official plugins are available:
+Features
+React with Vite: Utilizes Vite for fast and efficient development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ESLint Integration: Includes ESLint configuration for code quality and consistency.
 
-## Expanding the ESLint configuration
+Responsive Design: Ensures optimal viewing experience across various devices.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Getting Started
+To set up the project locally:
+
+git clone https://github.com/danodine/portfolio-website.git
+cd portfolio-website
+npm install
+npm run dev
+
+Then open http://localhost:3000 in your browser.
+
+Project Structure
+src/: Contains the main source code for the React components.
+
+public/: Houses static assets and the index.html file.
+
+package.json: Lists project dependencies and scripts.
+
+vite.config.js: Configuration file for Vite.
+
+Deployment
+--------------
+
+Contributing
+This is a personal project. Please do not copy or reuse the code or design. If you'd like to discuss something or suggest ideas, feel free to open an issue.
+
+License
+This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+You may not:
+
+Use the code or design for commercial purposes
+
+Modify or redistribute it
+
+Reproduce the content in any form without written permission
