@@ -1,0 +1,454 @@
+/* NAV BAR */
+.theme-toggle-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* HEADER */
+.header-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.header-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.header-title,
+.header-subtitle {
+  position: absolute;
+  color: #fff;
+  padding: 1rem;
+}
+.header-title {
+  top: 0;
+  left: 0;
+}
+.header-subtitle {
+  bottom: 0;
+  right: 0;
+}
+
+/* ABOUT */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .about-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* CARREAR */
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.timeline-line-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+  box-shadow: 0 0 20px #3b82f6;
+  transform-origin: top;
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.timeline-item .card {
+  position: relative;
+  background: white;
+  color: #121212;
+  border: 1px solid #121212;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 45%;
+  z-index: 2;
+}
+
+.timeline-item .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #3b82f6;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 10px;
+  }
+  .timeline-item {
+    margin-left: 30px;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+  .timeline-dot {
+    left: -36px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+  }
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .timeline-item .card {
+    width: 90%;
+  }
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+  }
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* EDUCATION */
+.ipad-animation-container {
+  width: 100%;
+  margin: 20px auto;
+  perspective: 1000px;
+}
+.ipad-mockup {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+}
+.ipad-screen {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  border-radius: 20px;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+}
+.ipad-shape {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.slide-content {
+  height: 100%;
+  display: flex !important;
+  flex-direction: row;
+  box-sizing: border-box;
+  gap: 1rem;
+  padding: 1rem 1rem 0 1rem;
+}
+.slide-image {
+  max-width: 50%;
+  text-align: center;
+}
+.slide-text {
+  max-width: 50%;
+  text-align: left;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+.slide-content img {
+  max-width: 98%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.slide-text-p-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.slide-text-p-text-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .ipad-screen {
+    border-radius: 10px;
+  }
+  .slide-content img {
+    border-radius: 10px;
+  }
+
+  .slide-text-p-title,
+  .slide-text-p-institution,
+  .slide-text-p-degree,
+  .slide-text-p-year {
+    margin-bottom: 0.5rem !important;
+    font-size: 0.75rem;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* SKILLS */
+.skill-icons {
+  height: 75px;
+  width: 75px;
+}
+.progress_bar * {
+  font-family: Nunito, sans-serif;
+}
+
+.progress_bar .text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.progress_bar .responsive-cell-block {
+  min-height: 75px;
+}
+
+.progress_bar .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+
+.progress_bar .responsive-container-block.container {
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.progress_bar .text-blk.section-headtext {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.progress_bar .text-blk.section-subheadtext {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 70px;
+  margin-left: 0px;
+  font-size: 20px;
+  color: #afb8ce;
+  line-height: 30px;
+  max-width: 730px;
+}
+
+.progress_bar .text-blk.card-head {
+  margin-top: 25px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.progress_bar .text-blk.card-text {
+  font-size: 18px;
+  color: #afb8ce;
+}
+
+.progress_bar .container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+}
+
+.progress_bar .circle-chart {
+  width: 200px;
+  height: 200px;
+}
+
+.progress_bar .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.progress_bar .card .circle-chart__percent {
+  alignment-baseline: central;
+  text-anchor: middle;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.progress_bar .responsive-container-block.big-container {
+  padding-top: 0px;
+  padding-right: 50px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+}
+
+.progress_bar
+  .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+  width: 300px;
+  padding-top: 0px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+@media (max-width: 1024px) {
+  .progress_bar
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+    width: 310px;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress_bar
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+    width: 300px;
+  }
+
+  .progress_bar .text-blk.section-headtext {
+    font-size: 30px;
+  }
+
+  .progress_bar .text-blk.section-subheadtext {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    margin-left: 0px;
+  }
+
+  .progress_bar .text-blk.card-head {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .progress_bar .responsive-container-block.big-container {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+  }
+
+  .progress_bar
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+    width: 100%;
+  }
+
+  .progress_bar .text-blk.section-headtext {
+    font-size: 26px;
+    line-height: 34px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+  }
+
+  .progress_bar .text-blk.section-subheadtext {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+  }
+
+  .progress_bar .text-blk.card-text {
+    font-size: 17px;
+  }
+}
