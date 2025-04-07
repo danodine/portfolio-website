@@ -43,13 +43,13 @@ const Skills = () => {
 
   return (
     <div className="py-16 max-w-3xl mx-auto text-center">
-      <div className="progress_bar">
+      <div className="skills-container">
         <div className="responsive-container-block big-container">
           <div className="responsive-container-block container">
-            <p className="text-blk section-headtext">
+            <p className="p-h3 skills-title">
               Top Skills
             </p>
-            <p className="text-blk section-subheadtext">
+            <p className="section-subheadtext">
             These are some of my top skills that I bring to every project. from building responsive interfaces to solving complex technical challenges. For a full list of my experience and skills, feel free to check out my <a href="https://www.linkedin.com/in/davidnodine/" target="blank">LinkedIn</a>
             </p>
             <div className="responsive-container-block">
@@ -61,7 +61,7 @@ const Skills = () => {
                   <div className="card">
                     {skill.icon}
                     <progress value={skill.percentage} />
-                    <p className="text-blk card-head">{skill.skill}</p>
+                    <p className="card-head">{skill.skill}</p>
                   </div>
                 </div>
               ))}

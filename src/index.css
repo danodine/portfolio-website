@@ -7,8 +7,8 @@
   }
   
   body {
-    font-family: sans-serif;
     background-color: #ffffff;
     color: #111827;
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
   }

@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <div ref={sectionRef} className="header-container">
-      <img src="/public/assets/images/davidNodine.jpg" alt="David Nodine" className="header-image" />
+      <img src="/public/assets/images/header-img.jpg" alt="David Nodine" className="header-image" />
       <motion.h1 
         className="header-title"
         variants={titleVariants}

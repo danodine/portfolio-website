@@ -4,6 +4,33 @@
   padding: 2rem;
   text-align: center;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, .p-h3, .p-h4 {
+  font-family: 'Playfair Display', serif;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+.p-h3 {
+  font-size: 2rem;
+}
+.p-h4 {
+  font-size: 1.25rem;
+}
 html.dark {
   body {
     background-color: #121212;
@@ -32,6 +59,9 @@ html.dark {
   .ipad-screen {
     background: #121212;
   }
+  .section-subheadtext a{
+    color: white;
+  }
 }
 
 @keyframes logo-spin {
@@ -43,6 +73,12 @@ html.dark {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-
+@media (min-width: 768px) {
+  #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin: 1rem;
+    text-align: center;
+  }
 }
+

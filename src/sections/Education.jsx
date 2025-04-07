@@ -54,7 +54,7 @@ const Education = () => {
 
   return (
     <div className="ipad-animation-container" ref={ref}>
-      <h3>Education</h3>
+      <p className="p-h3">Education</p>
       <motion.div
         className="ipad-mockup"
         style={{

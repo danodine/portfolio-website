@@ -4,11 +4,11 @@ const Contact = () => {
   const { darkMode } = useTheme();
   return (
     <div className="contact-container">
-      <h2 className="contact-title">Let's Connect</h2>
+      <p className="contact-title p-h3">Let's Connect</p>
       <p className="contact-text">
         Interested in working together or just want to say hi?
       </p>
-      <div>
+      <div className="contact-icons">
         <a href="https://www.linkedin.com/in/davidnodine/" target="blank">
           <img
             height="50"

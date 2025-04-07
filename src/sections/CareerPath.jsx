@@ -6,20 +6,49 @@ import "../css/global.css";
 
 const steps = [
   {
-    title: "01 Erstgespräch (Briefing)",
-    text: "Jedes Projekt beginnt mit einem persönlichen Gespräch...",
+    company: "Galileo Financial Technologies",
+    position: "Frontend Semi Senior developer",
+    tagline:
+      "Leading provider of advanced payment and financial technology solutions.",
+    tasks: [
+      "Developed web applications and mobile apps for Android and iOS",
+      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
+      "Teamwork using git development environments",
+      "Synchronize with back-end developers",
+      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
+      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
+    ],
+    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
   },
   {
-    title: "02 Konzept",
-    text: "Die Struktur, Funktionen und Inhalte werden erarbeitet...",
+    company: "Galileo Financial Technologies",
+    position: "Frontend Semi Senior developer",
+    tagline:
+      "Leading provider of advanced payment and financial technology solutions.",
+    tasks: [
+      "Developed web applications and mobile apps for Android and iOS",
+      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
+      "Teamwork using git development environments",
+      "Synchronize with back-end developers",
+      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
+      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
+    ],
+    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
   },
   {
-    title: "03 Designphase",
-    text: "Designentwürfe und Wireframes entstehen...",
-  },
-  {
-    title: "04 Umsetzung",
-    text: "Das Design wird in performanten Code umgesetzt...",
+    company: "Galileo Financial Technologies",
+    position: "Frontend Semi Senior developer",
+    tagline:
+      "Leading provider of advanced payment and financial technology solutions.",
+    tasks: [
+      "Developed web applications and mobile apps for Android and iOS",
+      "Use of tools React, React Native, Redux, jest, Formik, Yup, Docker, Apache Cordova",
+      "Teamwork using git development environments",
+      "Synchronize with back-end developers",
+      "Coordinated with clients to refine development issues and resolve 95% of bugs within short timeframes",
+      "implemented code quality improvements using SonarCloud, leading to an 85% decrease in security vulnerabilities and code smells",
+    ],
+    yearPlace: "Loja, Ecuador / 03.2022 – 01.2024",
   },
 ];
 
@@ -34,7 +63,7 @@ const CareerPath = () => {
 
   return (
     <div className="timeline" ref={timelineRef}>
-              <h3>Carrear path</h3>
+      <p className="careear-path-title p-h3">Career Path</p>
       <div className="timeline-line">
         <motion.div
           className="timeline-line-glow"
@@ -43,10 +72,17 @@ const CareerPath = () => {
       </div>
 
       {steps.map((step) => (
-        <TimelineItem key={step.title} title={step.title} text={step.text} />
+        <TimelineItem
+          key={step.company}
+          company={step.company}
+          tasks={step.tasks}
+          position={step.position}
+          tagline={step.tagline}
+          yearPlace={step.yearPlace}
+        />
       ))}
     </div>
   );
-}
+};
 
 export default CareerPath;
