@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <div ref={sectionRef} className="header-container">
       <img
-        src="/public/assets/images/header-img.jpg"
+        src="/assets/images/header-img.jpg"
         alt="David Nodine"
         className="header-image"
       />

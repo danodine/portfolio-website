@@ -8,7 +8,7 @@ import "../css/global.css";
 
 const slides = [
   {
-    image: "/public/assets/images/070d0eef",
+    image: "/assets/images/070d0eef",
     title: "University Engineering Degree",
     institution: "Universidad Técnica Particular de Loja",
     degree: "Computer Systems Engineer and Computer Science",
@@ -17,7 +17,7 @@ const slides = [
       "Tesis: 'Evaluation of QoS Parameters of VoIP in MANET Networks'",
   },
   {
-    image: "/public/assets/images/070d0eef",
+    image: "/assets/images/070d0eef",
     title: "This is slide 2",
     institution: "ggwp",
     degree: "Bachelor of Science in Computer Science",
@@ -25,7 +25,7 @@ const slides = [
     descriptionWb: "this is a description",
   },
   {
-    image: "/public/assets/images/070d0eef",
+    image: "/assets/images/070d0eef",
     title: "This is slide 3",
     institution: "ggwp",
     degree: "Bachelor of Science in Computer Science",
@@ -38,8 +38,8 @@ const Education = () => {
   const isMobile = window.innerWidth <= 768;
 
   const ipadImage = isMobile
-    ? "/public/assets/images/ipad-mobile.svg"
-    : "/public/assets/images/ipad-web.png";
+    ? "/assets/images/ipad-mobile.svg"
+    : "/assets/images/ipad-web.png";
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
