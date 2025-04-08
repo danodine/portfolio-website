@@ -10,7 +10,7 @@ import "../css/global.css";
 
 const Education = () => {
   const { language } = useLanguage();
-  const { slides } = getContent(language);
+  const { slides, titleElements } = getContent(language);
   const isMobile = window.innerWidth <= 768;
 
   const ipadImage = isMobile
@@ -31,7 +31,7 @@ const Education = () => {
 
   return (
     <div className="ipad-animation-container" ref={ref}>
-      <p className="p-h3">Education</p>
+      <p className="p-h3">{titleElements.education}</p>
       <motion.div
         className="ipad-mockup"
         style={{

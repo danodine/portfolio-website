@@ -4,18 +4,15 @@ import "../css/global.css";
 
 const Skills = () => {
     const { language } = useLanguage();
-    const { skills } = getContent(language);
+    const { skills, titleElements } = getContent(language);
   return (
     <div className="py-16 max-w-3xl mx-auto text-center">
       <div className="skills-container">
         <div className="responsive-container-block big-container">
           <div className="responsive-container-block container">
-            <p className="p-h3 skills-title">Top Skills</p>
+            <p className="p-h3 skills-title">{titleElements.topSkills}</p>
             <p className="section-subheadtext">
-              These are some of my top skills that I bring to every project.
-              from building responsive interfaces to solving complex technical
-              challenges. For a full list of my experience and skills, feel free
-              to check out my{" "}
+              {titleElements.topSkillDescription}
               <a href="https://www.linkedin.com/in/davidnodine/" target="blank">
                 LinkedIn
               </a>

@@ -1,12 +1,16 @@
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
+import { getContent } from "../data/getContent";
 
 const Contact = () => {
   const { darkMode } = useTheme();
+  const { language } = useLanguage();
+  const { titleElements } = getContent(language);
   return (
     <div className="contact-container">
-      <p className="contact-title p-h3">Let's Connect</p>
+      <p className="contact-title p-h3">{titleElements.connect}</p>
       <p className="contact-text">
-        Interested in working together or just want to say hi?
+        {titleElements.conectText}
       </p>
       <div className="contact-icons">
         <a href="https://www.linkedin.com/in/davidnodine/" target="blank">

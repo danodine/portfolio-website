@@ -1,6 +1,10 @@
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
+import { getContent } from "../data/getContent";
 
 const ThemeToggle = () => {
+  const { language  } = useLanguage();
+  const {navSecondaryElements } = getContent(language);
   const { darkMode, setDarkMode } = useTheme();
 
   return (
@@ -8,7 +12,7 @@ const ThemeToggle = () => {
       onClick={() => setDarkMode(!darkMode)}
       className="theme-toggle-button"
     >
-      {darkMode ? "🌙 Dark" : "☀️ Light"}
+      {darkMode ? `🌙 ${navSecondaryElements.textDark}` : `☀️ ${navSecondaryElements.textLight}`}
     </button>
   );
 };

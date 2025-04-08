@@ -11,7 +11,7 @@ import "../css/global.css";
 
 const NavbarComponent = () => {
   const { language, setLanguage } = useLanguage();
-  const { navElements } = getContent(language);
+  const { navElements, navSecondaryElements } = getContent(language);
   const [expanded, setExpanded] = useState(false);
   const { darkMode } = useTheme();
   const collapseRef = useRef();
@@ -19,9 +19,9 @@ const NavbarComponent = () => {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     const isMobile = window.innerWidth < 768;
-  
+
     closeNavbar();
-  
+
     setTimeout(() => {
       if (element) {
         const yOffset = isMobile ? -50 : -90;
@@ -61,16 +61,19 @@ const NavbarComponent = () => {
           <Nav className="me-auto">
             {navElements.map((item) => (
               <Nav.Link
-                key={item}
+                key={item.key}
                 className="navbar-link"
-                onClick={() => scrollTo(item)}
+                onClick={() => scrollTo(item.key)}
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.value.charAt(0).toUpperCase() + item.value.slice(1)}
               </Nav.Link>
             ))}
           </Nav>
           <Nav className="ms-auto d-flex align-items-center">
-            <NavDropdown title="Language" id="language-dropdown">
+            <NavDropdown
+              title={navSecondaryElements.language}
+              id="language-dropdown"
+            >
               <NavDropdown.Item
                 active={language === "en"}
                 onClick={() => {

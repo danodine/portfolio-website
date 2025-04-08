@@ -8,10 +8,10 @@ import "../css/global.css";
 
 const AboutCards = () => {
   const { language } = useLanguage();
-  const { cards } = getContent(language);
+  const { cards, titleElements } = getContent(language);
   return (
     <div className="about-container">
-      <p className="about-me p-h3">About Me</p>
+      <p className="about-me p-h3">{titleElements.about}</p>
       <div className="about-section">
         {cards.map((card, index) => (
           <motion.div

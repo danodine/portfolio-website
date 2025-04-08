@@ -1,9 +1,13 @@
 import React, { useRef, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useAnimation, useInView } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
+import { getContent } from "../data/getContent";
 import "../css/global.css";
 
 const Header = () => {
+  const { language } = useLanguage();
+  const { titleElements } = getContent(language);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.5, once: false });
   const titleControls = useAnimation();
@@ -67,7 +71,7 @@ const Header = () => {
         initial="hiddenRight"
         animate={subtitleControls}
       >
-        SOFTWARE ENGINEER
+        {titleElements.degree}
       </motion.h2>
     </div>
   );

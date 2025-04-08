@@ -8,7 +8,7 @@ import "../css/global.css";
 
 const CareerPath = () => {
   const { language } = useLanguage();
-  const { steps } = getContent(language);
+  const { steps, titleElements } = getContent(language);
   const timelineRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: timelineRef,
@@ -19,7 +19,7 @@ const CareerPath = () => {
 
   return (
     <div className="timeline" ref={timelineRef}>
-      <p className="careear-path-title p-h3">Career Path</p>
+      <p className="careear-path-title p-h3">{titleElements.careerPath}</p>
       <div className="timeline-line">
         <motion.div
           className="timeline-line-glow"
