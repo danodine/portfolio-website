@@ -150,9 +150,21 @@ const skills = [
     },
   ];
 
+  const navElements = ["about", "career", "education", "skills", "contact"];
+
+  const titleElements = {
+    about: "About Me",
+    careerPath: "Career Path",
+    education: "Education",
+    topSkills: "Top Skills",
+    connect: "Connect",
+  };
+
   export const content = {
     cards,
     steps,
     slides,
     skills,
+    navElements,
+    titleElements,
   };

@@ -6,12 +6,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { getContent } from "../data/getContent";
 import "../css/global.css";
 
 const NavbarComponent = () => {
+  const { language, setLanguage } = useLanguage();
+  const { navElements } = getContent(language);
   const [expanded, setExpanded] = useState(false);
   const { darkMode } = useTheme();
-  const { language, setLanguage } = useLanguage();
   const collapseRef = useRef();
 
   const scrollTo = (id) => {
@@ -33,8 +35,6 @@ const NavbarComponent = () => {
   const closeNavbar = () => {
     setExpanded(false);
   };
-
-  const elements = ["about", "career", "education", "skills", "contact"];
 
   return (
     <Navbar
@@ -59,7 +59,7 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" ref={collapseRef}>
           <Nav className="me-auto">
-            {elements.map((item) => (
+            {navElements.map((item) => (
               <Nav.Link
                 key={item}
                 className="navbar-link"

@@ -64,8 +64,21 @@ html.dark {
   .dropdown-item.active,
   .dropdown-item:active {
     background-color: white !important;
+    color: #121212 !important;
+  }
+  .dropdown-item.hover,
+  .dropdown-item:hover {
+    background-color: white !important;
+    color: #121212 !important;
+    opacity: 0.25;
   }
   .nav-link {
+    color: white;
+  }
+  .dropdown-menu {
+    background-color: #121212;
+  }
+  .dropdown-item {
     color: white;
   }
 }
