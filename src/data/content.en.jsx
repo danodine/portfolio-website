@@ -13,6 +13,9 @@ import {
   SiGit,
   SiMongodb,
   SiRedux,
+  SiTypescript,
+  SiHtml5,
+  SiCss,
 } from "@icons-pack/react-simple-icons";
 
 const cards = [
@@ -100,7 +103,7 @@ const steps = [
 
 const slides = [
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/utpl",
     title: "University Engineering Degree",
     institution: "Universidad Técnica Particular de Loja",
     degree: "Computer Systems Engineer and Computer Science",
@@ -109,7 +112,7 @@ const slides = [
       "Tesis: 'Evaluation of QoS Parameters of VoIP in MANET Networks'",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/gast",
     title: "B1 German Proficiency Certificate - G.A.S.T.",
     institution: "G.A.S.T.",
     degree:
@@ -118,7 +121,7 @@ const slides = [
     descriptionWb: "",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/udemy",
     title: "The Complete JavaScript Course 2021: From Zero to Expert!",
     institution: "Udemy",
     degree: "Certificate of completion",
@@ -126,7 +129,7 @@ const slides = [
     descriptionWb: "",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/udemy",
     title: "React - The Complete Guide",
     institution: "Udemy",
     degree: "Certificate of completion",
@@ -137,40 +140,58 @@ const slides = [
 
 const skills = [
   {
-    skill: "React",
-    percentage: 0.95,
-    description: "description",
-    icon: <SiReact className="skill-icons" />,
-  },
-  {
     skill: "JavaScript",
-    percentage: 0.95,
+    percentage: 100,
     description: "description",
     icon: <SiJavascript className="skill-icons" />,
   },
   {
-    skill: "Node.js",
-    percentage: 0.95,
+    skill: "TypeScript",
+    percentage: 0.90,
     description: "description",
-    icon: <SiNodedotjs className="skill-icons" />,
+    icon: <SiTypescript className="skill-icons" />,
   },
   {
-    skill: "MongoDB",
-    percentage: 0.95,
+    skill: "React - React Native",
+    percentage: 100,
     description: "description",
-    icon: <SiMongodb className="skill-icons" />,
-  },
-  {
-    skill: "Git",
-    percentage: 0.95,
-    description: "description",
-    icon: <SiGit className="skill-icons" />,
+    icon: <SiReact className="skill-icons" />,
   },
   {
     skill: "Redux",
     percentage: 0.95,
     description: "description",
     icon: <SiRedux className="skill-icons" />,
+  },
+  {
+    skill: "Git",
+    percentage: 100,
+    description: "description",
+    icon: <SiGit className="skill-icons" />,
+  },
+  {
+    skill: "Node.js",
+    percentage: 0.85,
+    description: "description",
+    icon: <SiNodedotjs className="skill-icons" />,
+  },
+  {
+    skill: "MongoDB",
+    percentage: 0.80,
+    description: "description",
+    icon: <SiMongodb className="skill-icons" />,
+  },
+  {
+    skill: "HTML5",
+    percentage: 100,
+    description: "description",
+    icon: <SiHtml5 className="skill-icons" />,
+  },
+  {
+    skill: "CSS - SASS",
+    percentage: 100,
+    description: "description",
+    icon: <SiCss className="skill-icons" />,
   },
 ];
 

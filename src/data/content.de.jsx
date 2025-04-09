@@ -13,6 +13,9 @@ import {
   SiGit,
   SiMongodb,
   SiRedux,
+  SiTypescript,
+  SiHtml5,
+  SiCss,
 } from "@icons-pack/react-simple-icons";
 
 const cards = [
@@ -136,40 +139,58 @@ const slides = [
 
 const skills = [
   {
-    skill: "React",
-    percentage: 0.95,
-    description: "description",
-    icon: <SiReact className="skill-icons" />,
-  },
-  {
     skill: "JavaScript",
-    percentage: 0.95,
+    percentage: 100,
     description: "description",
     icon: <SiJavascript className="skill-icons" />,
   },
   {
-    skill: "Node.js",
-    percentage: 0.95,
+    skill: "TypeScript",
+    percentage: 0.90,
     description: "description",
-    icon: <SiNodedotjs className="skill-icons" />,
+    icon: <SiTypescript className="skill-icons" />,
   },
   {
-    skill: "MongoDB",
-    percentage: 0.95,
+    skill: "React - React Native",
+    percentage: 100,
     description: "description",
-    icon: <SiMongodb className="skill-icons" />,
-  },
-  {
-    skill: "Git",
-    percentage: 0.95,
-    description: "description",
-    icon: <SiGit className="skill-icons" />,
+    icon: <SiReact className="skill-icons" />,
   },
   {
     skill: "Redux",
     percentage: 0.95,
     description: "description",
     icon: <SiRedux className="skill-icons" />,
+  },
+  {
+    skill: "Git",
+    percentage: 100,
+    description: "description",
+    icon: <SiGit className="skill-icons" />,
+  },
+  {
+    skill: "Node.js",
+    percentage: 0.85,
+    description: "description",
+    icon: <SiNodedotjs className="skill-icons" />,
+  },
+  {
+    skill: "MongoDB",
+    percentage: 0.80,
+    description: "description",
+    icon: <SiMongodb className="skill-icons" />,
+  },
+  {
+    skill: "HTML5",
+    percentage: 100,
+    description: "description",
+    icon: <SiHtml5 className="skill-icons" />,
+  },
+  {
+    skill: "CSS - SASS",
+    percentage: 100,
+    description: "description",
+    icon: <SiCss className="skill-icons" />,
   },
 ];
 

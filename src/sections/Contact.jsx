@@ -25,7 +25,7 @@ const Contact = () => {
             alt={`Linkedin`}
           />
         </a>
-        <a href="">
+        <a href="https://www.stepstone.de/profile?copts=eyJ0aGlyZFBhcnR5TWFya2V0aW5nQ29udGVudEVtYWlsIjpudWxsfQ%3D%3D">
           <img
             height="30"
             width="30"
@@ -37,7 +37,7 @@ const Contact = () => {
             alt={`Stepstone`}
           />
         </a>
-        <a href="">
+        <a href="https://www.xing.com/profile/DavidAnthony_NodineWyatt">
           <img
             height="30"
             width="30"

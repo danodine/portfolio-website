@@ -25,7 +25,7 @@ const Education = () => {
       : ["start 100%", "start 25%"],
   });
 
-  const imageEnding = isMobile ? "-mobile.jpg" : "-web.jpg";
+  const imageEnding = isMobile ? "-mobile.png" : "-web.png";
 
   const rotateX = useTransform(scrollYProgress, [0, 1], [75, 0]);
 
