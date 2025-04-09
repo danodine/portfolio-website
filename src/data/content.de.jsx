@@ -102,7 +102,7 @@ const steps = [
 
 const slides = [
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/utpl",
     title: "Universitätsabschluss in Ingenieurwesen",
     institution: "Universidad Técnica Particular de Loja",
     degree: "Informatikingenieurwesen und Computerwissenschaften",
@@ -111,7 +111,7 @@ const slides = [
       "Abschlussarbeit: 'Bewertung von QoS-Parametern von VoIP in MANET-Netzwerken'",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/gast",
     title: "B1 Deutschzertifikat - G.A.S.T.",
     institution: "G.A.S.T.",
     degree:
@@ -120,7 +120,7 @@ const slides = [
     descriptionWb: "",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/udemy",
     title: "Der komplette JavaScript-Kurs 2021: Von Anfänger bis Experte!",
     institution: "Udemy",
     degree: "Abschlusszertifikat",
@@ -128,7 +128,7 @@ const slides = [
     descriptionWb: "",
   },
   {
-    image: "/assets/images/070d0eef",
+    image: "/assets/images/udemy",
     title: "React – Der komplette Leitfaden",
     institution: "Udemy",
     degree: "Abschlusszertifikat",
